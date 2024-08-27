@@ -33,30 +33,48 @@
               </ul>
             </div>
           </nav>
-    
-    <div id="tarjeta-1" class="card" style="width: 18rem;">
-        <img src="https://cdn0.casamientos.com.ar/vendor/8801/3_2/960/jpg/salon-para-tu-boda_v1.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Evento NR 1</h5>
-          <p class="card-text">Nombre=...</p><p>Apellido=</p><p>Mail=...</p><p>Fecha=26/06/2011</p>
-          <a href="#" class="btn btn-primary" style="background-color: red; border-color: red;">CANCELAR EVENTO</a>
+    <div id="contenedor-tarjetas">
+        <div id="tarjeta-1" class="card" style="width: 18rem;">
+            <img src="https://cdn0.casamientos.com.ar/vendor/8801/3_2/960/jpg/salon-para-tu-boda_v1.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Evento NR 1</h5>
+              <p class="card-text">Nombre=...</p><p>Apellido=</p><p>Mail=...</p><p>Direccion=....</p><p>Fecha=26/06/2011</p>
+              <a href="#" class="btn btn-primary btn-cancelar" style="background-color: red; border-color: red;">CANCELAR EVENTO</a>
+            </div>
+        </div>
+        <div id="tarjeta-2" class="card" style="width: 18rem;">
+            <img src="https://cdn0.casamientos.com.ar/vendor/8801/3_2/960/jpg/salon-para-tu-boda_v1.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Evento NR 3</h5>
+              <p class="card-text">Nombre=...</p><p>Apellido=</p><p>Mail=...</p><p>Direccion=....</p><p>Fecha=26/06/2011</p>
+              <a href="#" class="btn btn-primary btn-cancelar" style="background-color: red; border-color: red;">CANCELAR EVENTO</a>
+            </div>
+        </div>
+        <div id="tarjeta-3" class="card" style="width: 18rem;">
+            <img src="https://cdn0.casamientos.com.ar/vendor/8801/3_2/960/jpg/salon-para-tu-boda_v1.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Evento NR 2</h5>
+              <p class="card-text">Nombre=...</p><p>Apellido=</p><p>Mail=...</p><p>Direccion=....</p><p>Fecha=26/06/2011</p>
+              <a href="#" class="btn btn-primary btn-cancelar" style="background-color: red; border-color: red;">CANCELAR EVENTO</a>
+            </div>
         </div>
     </div>
-
-
+    
     <script>
-        // Selecciona el botón con la clase 'btn btn-primary'
-        document.querySelector('.btn.btn-primary').addEventListener('click', function(event) {
+        // Selecciona todos los botones con la clase 'btn-red'
+        document.querySelectorAll('.btn-cancelar').forEach(button => {
+          button.addEventListener('click', function(event) {
             // Evita que el enlace realice su acción predeterminada
             event.preventDefault();
-    
+        
             // Selecciona el elemento padre (la tarjeta) y lo elimina
             const card = this.closest('.card');
             if (card) {
-                card.remove();
+              card.remove();
             }
+          });
         });
     </script>
-
-    
      
+
+    <body>

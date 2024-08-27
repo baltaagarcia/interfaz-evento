@@ -1,1 +1,13 @@
+body{
+    background-color: gainsboro;
+}
 
+#contenedor-tarjetas{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    margin-left: 8px;
+}
